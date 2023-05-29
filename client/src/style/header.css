@@ -30,7 +30,7 @@ header .container{
     width: 50vw;
 
     list-style-type: none;
-}
+} 
 
 #heaList a {
     text-align: center;
@@ -38,4 +38,6 @@ header .container{
     text-decoration: none;
 
     color: white;
+} #heaList a:hover {
+    color: gray;
 }
