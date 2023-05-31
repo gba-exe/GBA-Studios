@@ -1,0 +1,85 @@
+header {
+    height: 10vh;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    background-color: #000;
+    border-bottom: solid 1px white;
+}
+
+header .container{    
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divDireita {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 50%;
+}
+
+.divDireita a {
+    text-decoration: none;
+    color: white;
+}
+
+
+#logoGBA {
+    height: 8vh;
+    width: 8vh;
+}
+
+#heaList li {
+    float: left;
+}
+
+#heaList {
+    display: flex;
+    gap: 2vw;
+    
+    width: fit-content;
+    
+    list-style-type: none;
+} 
+
+#heaList a {
+    text-align: center;
+    
+    text-decoration: none;
+    
+    color: white;
+} #heaList a:hover {
+    color: gray;
+}
+
+.vl {
+    border-left: 1px solid white;
+    height: 70%;
+}
+
+.aCadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 40%;
+    width: 10%;
+    border: solid 1px white;
+}
+
+.aLogin {
+    color: black;
+}
+.aLogin:hover {
+    color: gray;
+}
+
+.aCadastro:hover {
+    background-color: white;
+    color: black;
+}
