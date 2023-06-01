@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/cadastro.css">
 
+    <script src="../script/cadastro.js"></script>
+
     <title>Cadastro</title>
 </head>
 
@@ -31,27 +33,28 @@
 
                 <div class="divInput">
                     <label class="iptLabel" for="iptSenha">Senha: </label>
-                    <input type="text" id="iptSenha">
+                    <input type="password" id="iptSenha">
                 </div>
 
                 <div class="divInput">
                     <label class="iptLabel" for="iptConfirmarSenha">Confirme a senha: </label>
-                    <input type="text" id="iptConfirmarSenha">
+                    <input type="password" id="iptConfirmarSenha">
                 </div>
 
                 <div class="divInput">
                     <label for="iptConfirmarSenha">Nível de conhcimento musical?: </label>
                     <select name="Nível de Conhecimento" id="nivConhecimento">
                         <option value="0">Selecione uma opção</option>
-                        <option value="1">Básico</option>
-                        <option value="2">Médio</option>
-                        <option value="3">Alto</option>
+                        <option value="1">Nenhum</option>
+                        <option value="2">Básico</option>
+                        <option value="3">Médio</option>
+                        <option value="4">Alto</option>
                     </select>
                 </div>
 
                 <p>Já tem um login? <a href="./login.html">Entrar</a></p>
-                
-                <button>Cadastrar</button>
+
+                <button onclick="cadastrar()">Cadastrar</button>
         </div>
     </div>
 </body>

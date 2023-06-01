@@ -3,16 +3,14 @@ function cadastrar() {
     // Agora vá para o método fetch logo abaixo
     var nomeVar = iptNome.value;
     var emailVar = iptEmail.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    var senhaVar = iptSenha.value;
+    var confirmacaoSenhaVar = iptConfirmarSenha.value;
+    var nivConhecimentoVar = nivConhecimento.value;
 
     if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
         alert("Preencha todos os campos");
 
         return false;
-    }
-    else {
-        setInterval(sumirMensagem, 5000)
     }
 
     // Enviando o valor da nova input
@@ -26,29 +24,24 @@ function cadastrar() {
             // Agora vá para o arquivo routes/usuario.js
             nomeServer: nomeVar,
             emailServer: emailVar,
-            senhaServer: senhaVar
+            senhaServer: senhaVar,
+            conhecimentoServer: nivConhecimentoVar
         })
     }).then(function (resposta) {
 
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            cardErro.style.display = "block";
-
-            mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+            alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
             setTimeout(() => {
                 window.location = "login.html";
             }, "2000")
-
-            limparFormulario();
-            finalizarAguardar();
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
     });
 
     return false;

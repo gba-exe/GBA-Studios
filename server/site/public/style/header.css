@@ -10,10 +10,11 @@ header {
     border-bottom: solid 1px white;
 }
 
-header .container{    
+header .container {
     align-items: center;
     justify-content: space-between;
 }
+
 
 .divDireita {
     display: flex;
@@ -41,19 +42,21 @@ header .container{
 #heaList {
     display: flex;
     gap: 2vw;
-    
+
     width: fit-content;
-    
+
     list-style-type: none;
-} 
+}
 
 #heaList a {
     text-align: center;
-    
+
     text-decoration: none;
-    
+
     color: white;
-} #heaList a:hover {
+}
+
+#heaList a:hover {
     color: gray;
 }
 
@@ -62,24 +65,39 @@ header .container{
     height: 70%;
 }
 
-.aCadastro {
+#aCadastro {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     height: 40%;
     width: 10%;
     border: solid 1px white;
 }
 
-.aLogin {
-    color: black;
+#aLogin {
+    color: white;
 }
-.aLogin:hover {
+
+#aLogin:hover {
     color: gray;
 }
 
-.aCadastro:hover {
+#aCadastro:hover {
     background-color: white;
     color: black;
+}
+
+#user {
+    width: 3vw;
+    height: 3vh;    
+}
+
+.dropDown {
+    display: none;
+    background-color: black;
+}
+
+#user:hover .dropDown {
+    display: block;
 }
