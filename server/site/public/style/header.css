@@ -66,6 +66,19 @@ header .container {
 }
 
 #aCadastro {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40%;
+    width: 10%;
+    background-color: white;
+}
+
+#aCadastro:hover {
+    background-color: black;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,21 +89,29 @@ header .container {
 }
 
 #aLogin {
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40%;
+    width: 10%;
+    border: solid 1px white;
 }
 
 #aLogin:hover {
-    color: gray;
-}
-
-#aCadastro:hover {
-    background-color: white;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40%;
+    width: 10%;
+    background-color: white;
 }
 
 #user {
     width: 3vw;
-    height: 3vh;    
+    height: 3vh;
 }
 
 .dropDown {
@@ -100,4 +121,8 @@ header .container {
 
 #user:hover .dropDown {
     display: block;
+}
+
+#nomeUsuario {
+    color: white;
 }

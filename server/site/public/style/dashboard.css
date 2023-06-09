@@ -1,0 +1,30 @@
+.divContentDashboard {
+    width: 100%;
+    height: fit-content;
+
+    font-size: 2vw;
+    
+    background-color: black;
+    color: white;
+}
+
+.divContentDashboard .container {
+    flex-direction: column;
+}
+
+.linha {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 5vh 0vh 0vh 0vh;
+}
+
+.divLogins {
+    width: 40vw;
+    height: 40vh;
+
+    color: black;
+    background-color: white;
+}

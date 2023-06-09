@@ -33,7 +33,12 @@ function entrar() {
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
 
-                window.location = "../index.html";
+                if (json.fkAdm == null){
+                    window.location = "./dashboard.html"
+                } else {
+                    window.location = "../index.html";
+                }
+
 
             });
 

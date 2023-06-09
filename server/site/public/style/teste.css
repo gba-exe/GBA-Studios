@@ -1,0 +1,13 @@
+#teste {
+    margin-left: 25vw;
+    width: 45vw;
+}
+
+#teste:hover {
+    animation: spinning 1s infinite linear;
+}
+
+@keyframes spinning {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
