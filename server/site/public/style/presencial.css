@@ -1,0 +1,69 @@
+input {
+    width: 50%;
+}
+
+label {
+    font-size: 120%;
+}
+
+.iptLabel {
+    text-align: start;
+    width: 50%;
+}
+
+button {
+    width: 50%;
+    height: 10%;
+
+    font-size: 120%;
+
+    background-color: black;
+    color: white;
+
+    border: solid 1px white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.fndPresencial {
+    width: 100%;
+    height: 100vh;
+
+    padding: 20vh;
+
+    background-image: url(../images/pexels-cottonbro-studio-7097475.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 150vh;
+}
+
+.formCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+
+    margin: auto;
+    
+    width: 40vw;
+    height: 70vh;
+
+    border: solid 1px white;
+    background-color: black;
+    color: white;
+}
+
+.divInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+

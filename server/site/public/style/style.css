@@ -44,6 +44,8 @@ body {
     width: 100%;
     height: fit-content;
 
+    padding-bottom: 2vh;
+
     font-size: 2vw;
 
     background-color: white;

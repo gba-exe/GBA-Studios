@@ -2,10 +2,12 @@
     width: 100%;
     height: fit-content;
 
+    padding-bottom: 1vh;
+
     font-size: 2vw;
-    
-    background-color: black;
-    color: white;
+
+    background-color: white;
+    color: black;
 }
 
 .divContentDashboard .container {
@@ -18,13 +20,171 @@
 
     display: flex;
     justify-content: space-around;
-    padding: 5vh 0vh 0vh 0vh;
+    padding: 4vh 0vh 0vh 0vh;
 }
 
-.divLogins {
+.divGrafico {
     width: 40vw;
     height: 40vh;
 
-    color: black;
+    border: solid 1px #000;
     background-color: white;
+}
+
+.divNumero {
+    width: 40vw;
+    height: 40vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+}
+
+#qtdPresencial {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#qtdPresencial h1 {
+    font-size: 25vh;
+
+    margin: 0;
+}
+
+#qtdPresencial p {
+    font-size: 4.1vh;
+
+    margin: 0;
+}
+
+#divNivelConhecimento {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#divNivelConhecimento h1 {
+    font-size: 3vh;
+
+    margin: 0;
+}
+
+#divNivelConhecimento .grafico {
+    width: 40%;
+    height: 80%;
+
+    margin: auto;
+
+    background-color: #fff;
+}
+
+.grafico {
+    width: 100%;
+    height: 100%;
+
+    margin: auto;
+
+    background-color: #fff;
+}
+
+.titulo {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 4vh 0vh 0vh 0vh;
+}
+
+#endereco {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 2vh;
+
+
+    border: solid 2px #000;
+}
+
+.divNum {
+    display: flex;
+    flex-direction: column;
+
+    width: 48%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #000;
+}
+
+.divNum h1 {
+    font-size: 25vh;
+
+    margin: 0;
+}
+
+.divNum p {
+    font-size: 5vh;
+
+    margin: 0;
+}
+
+#endereco h1 {
+    margin-bottom: 0;
+}
+
+#endereco #pNome {
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 2px #000;
+}
+
+#endereco #pEndereco {
+    width: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 2px #000;
+}
+
+#endereco .linha {
+    width: 95%;
+    border: solid 2px #000;
+}
+
+.esquerda {
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita {
+    width: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

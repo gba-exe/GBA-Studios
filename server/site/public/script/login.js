@@ -31,7 +31,7 @@ function entrar() {
 
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.ID_USUARIO = json.idUsuario;
 
                 if (json.fkAdm == null){
                     window.location = "./dashboard.html"
@@ -56,4 +56,43 @@ function entrar() {
     })
 
     return false;
+}
+
+function pegarId() {
+    var idUsuarioVar = sessionStorage.ID_USUARIO;
+    
+    if (idUsuarioVar != undefined) {
+        fetch("/usuarios/registrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuarioServer: idUsuarioVar,
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO registrarLogin()!")
+    
+            if (resposta.ok) {
+                console.log(resposta);
+    
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                });
+    
+            } else {
+                console.log("Houve um erro ao tentar registrar o login!");
+    
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+    
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+    
+        return false;
+    }
 }

@@ -1,3 +1,5 @@
+var dotenv = require('dotenv');
+dotenv.config();
 var mysql = require("mysql2");
 var sql = require('mssql');
 

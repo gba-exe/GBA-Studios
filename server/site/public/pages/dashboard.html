@@ -12,31 +12,47 @@
     <link rel="stylesheet" href="../style/dashboard.css">
 
     <link rel="shortcut icon" href="../images/GBA-studios.png" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../script/dashboard.js"></script>
+
     <title>Dashboard</title>
 </head>
 
-<body>
+<body onload="obterQtdLogin(), obterQtdUsuarios(), obterQtdPresencial(), obterNivelConhecimento(), obterEnderecos(), obterLogin()">
     <script src="../components/header.js"></script>
     <div class="divContentDashboard">
         <div class="container">
             <div class="linha">
-                <div class="divLogins">
-                    qtdLogins
+                <div class="divGrafico">
+                    <canvas id="qtdLogin" class="grafico"></canvas>
                 </div>
-                <div class="divLogins">
-                    qtdLogin/semLogin
+                <div class="divNumero">
+                    <div class="divNum" id="qtdUsuarios"></div>
+                    <div class="divNum" id="qtdAcessos"></div>
                 </div>
             </div>
             
             <div class="linha">
-                <div class="divLogins">
-                    cursinoPresencial  |  lugar pra ver quem quer
+                <div class="divGrafico">
+                    <div id="divNivelConhecimento">
+                        <h1>Nível de Conhecimento dos Usuários</h1>
+                        <canvas id="nivConhecimento" class="grafico"></canvas>
+                    </div>
                 </div>
-                <div class="divLogins">
-                    interações com as paginas
+                <div id="qtdPresencial" class="divGrafico">
                 </div>
             </div>
-
+            <div class="linha">
+                <div id="endereco">
+                    <h1>Usuarios com interesse no curso presencial</h1>
+                    <div class="titulo">
+                        <p id="pNome">Nome</p id="pTitulo">
+                        <p id="pEndereco">Endereco</p id="pTitulo">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<script src="../script/script.js"></script>

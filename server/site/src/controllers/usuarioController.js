@@ -1,29 +1,5 @@
 var usuarioModel = require("../models/usuarioModel");
 
-var sessoes = [];
-
-function testar(req, res) {
-    console.log("ENTRAMOS NA usuarioController");
-    res.json("ESTAMOS FUNCIONANDO!");
-}
-
-function listar(req, res) {
-    usuarioModel.listar()
-        .then(function (resultado) {
-            if (resultado.length > 0) {
-                res.status(200).json(resultado);
-            } else {
-                res.status(204).send("Nenhum resultado encontrado!")
-            }
-        }).catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
-
 function entrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -97,9 +73,80 @@ function cadastrar(req, res) {
     }
 }
 
+function registrarLogin(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+
+    if (idUsuario == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    } else {
+        usuarioModel.registrarLogin(idUsuario)
+            .then(
+                function(resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function(erro) {
+                    console.log(erro);
+                    console.log("\nHouve um erro ao registrar o login", 
+                        erro.sqlMessage
+                        );
+                        res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function cadastrarEndereco(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+    var cep = req.body.cepServer
+    var rua = req.body.ruaServer
+    var numero = req.body.numeroServer
+    var complemento = req.body.complementoServer
+    var bairro = req.body.bairroServer
+    var cidade = req.body.cidadeServer
+    var estado = req.body.estadoServer
+
+
+    if (idUsuario == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    } else if (cep == undefined) {
+        res.status(400).send("Seu cep está undefined!");
+    } else if (rua == undefined) {
+        res.status(400).send("Sua rua está undefined!");
+    } else if (numero == undefined) {
+        res.status(400).send("Seu numero está undefined!");
+    } else if (complemento == undefined) {
+        res.status(400).send("Seu complemento está undefined!");
+    } else if (bairro == undefined) {
+        res.status(400).send("Seu bairro está undefined!");
+    } else if (cidade == undefined) {
+        res.status(400).send("Seu cidade está undefined!");
+    } else if (estado == undefined) {
+        res.status(400).send("Seu estado está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrarEndereco(idUsuario, cep, rua, numero, complemento, bairro, cidade, estado)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
-    listar,
-    testar
+    registrarLogin,
+    cadastrarEndereco
 }

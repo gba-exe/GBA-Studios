@@ -21,7 +21,7 @@ header .container {
     align-items: center;
     justify-content: space-around;
     height: 100%;
-    width: 50%;
+    width: 55%;
 }
 
 .divDireita a {
@@ -110,7 +110,10 @@ header .container {
 }
 
 #user {
-    width: 3vw;
+    height: 3vh;
+}
+
+#chart {
     height: 3vh;
 }
 
@@ -125,4 +128,26 @@ header .container {
 
 #nomeUsuario {
     color: white;
+}
+
+#pLogout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    height: 40%;
+    width: 10%;
+    border: solid 1px white;
+}
+
+#pLogout:hover {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40%;
+    width: 10%;
+    background-color: white;
 }

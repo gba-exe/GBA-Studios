@@ -59,3 +59,59 @@ input[type=radio] {
 }
 
 /* CARRROSSEL */
+
+#presencial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    margin: auto;
+
+    height: 40%;
+    width: 50%;
+    border: solid 2px black;
+    color: #000;
+}
+
+#presencial:hover {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+
+    height: 40%;
+    width: 50%;
+    background-color: black;
+}
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    margin: auto;
+
+    height: 40%;
+    width: 50%;
+    border: solid 2px black;
+    color: #000;
+}
+
+#login:hover {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+
+    height: 40%;
+    width: 50%;
+    background-color: black;
+}

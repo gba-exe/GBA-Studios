@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="" type="image/x-icon">
-    
+
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/home.css">
-    
+
     <link rel="shortcut icon" href="../images/GBA-studios.png" type="image/x-icon">
+
+    <script src="./script/login.js"></script>
     <title>GBA Studios</title>
 </head>
 
-<body>
+<body onload="pegarId()">
     <header id="headerLogout">
         <div class="container">
             <img id="logoGBA" src="./images/GBA-studios.png" alt="logo GBA Studios">
@@ -30,8 +32,31 @@
                 <a href="./pages/teste.html" class="vl"></a>
                 <a id="aLogin" href="./pages/login.html">Login</a>
                 <a id="aCadastro" href="./pages/cadastro.html">Cadastro</a>
-                <svg id="user" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#ffffff}</style><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
+
+                <svg id="chart" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <style>
+                        svg {
+                            fill: #ffffff
+                        }
+                    </style>
+                    <path
+                        d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z" />
+                </svg>
+
+
+
+
+                <svg id="user" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <style>
+                        svg {
+                            fill: #ffffff
+                        }
+                    </style>
+                    <path
+                        d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" />
+                </svg>
                 <p id="nomeUsuario"></p>
+                <p id="pLogout" onclick="logout()">Log-Out</p>
             </div>
         </div>
     </header>
@@ -55,25 +80,30 @@
     </div>
     <div class="divContent">
         <div class="container">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, veritatis accusamus soluta maiores
-                perferendis veniam est distinctio perspiciatis nam, obcaecati nobis totam officiis ratione libero non
-                quisquam alias. Placeat, harum!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam, atque laboriosam nulla aliquam
-                    reiciendis ut molestiae, quae quasi maxime quos voluptatibus id, animi eos tempora voluptas dolor
-                    asperiores ducimus!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium animi temporibus dolorum. Numquam
-                        exercitationem, ratione autem repellendus, neque magnam assumenda voluptate beatae incidunt officia
-                        ducimus? Ducimus, labore! Cum, accusamus eligendi?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates fuga itaque quae. Sit
-                            explicabo hic odio ea aspernatur minima deserunt sed. Architecto enim nihil provident esse atque
-                            aliquam? Odit!</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repudiandae quae voluptatum repellat
-                                numquam officiis laudantium doloribus ea, minus at ipsam veritatis vel similique optio nihil adipisci
-                nesciunt eos blanditiis!</p>
-            </div>
+            <p>O meio artístico, principalmente a música e seus relacionados, são considerados uma das formas mais puras
+                e íntimas de se expressar, por muitas vezes não necessariamente por palavras ou gestos. Desde criança me
+                encanto com esse mundo e conforme a minha formação, fui cada vez mais formando minha identidade e visão
+                sobre música.</p>
+            <p>A teoria musical, ou notação musical é uma forma de reger ou organizar os pensamentos musicais, pois a
+                música também é uma forma de se comunicar, com isso a notação permite uma organização, como as regras de
+                qualquer língua, e também, como qualquer linguagem, existem formas diferentes de se expressar que não
+                necessariamente estão incorretas. O âmbito deste projeto é explicar mais afundo exatamente essas formas
+                e
+                disseminar um conhecimento considerado complexo, de forma simples.</p>
+
+            <p>A proposta deste site é ensinar qualquer usuário sobre teoria musical <b>totalmente de graça</b>, dado que a maioria da população e
+                até uma parte da classe musical, possuem um conhecimento ínfimo sobre o assunto. E também visa difundir
+                outras ideias musicais pouco abordadas. O conteúdo deste site é <b>totalmente autoral</b> e visa ensinar brevemente e de forma simples partes importantes da teoria musical.</p>
+
+
+            <p>Caso queira se aprofundar mais no assunto e/ou prefira um curso presencial com técnicas mais avançadas e totalmente personalizado para seu
+                instrumento. <a id="presencial" href="./pages/presencial.html">Clique Aqui!</a><a id="login"
+                    href="./pages/login.html">Clique Aqui!</a></p>
         </div>
-    </body>
-    
-    </html>
-    
-    <script src="./script/index.js"></script>
+    </div>
+</body>
+
+</html>
+
+<script src="./script/index.js"></script>
+<script src="./script/script.js"></script>
